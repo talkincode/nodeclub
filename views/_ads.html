@@ -1,0 +1,42 @@
+<%
+  var ads = [
+    {
+      href: 'http://alinode.aliyun.com/',
+      label: 'alinode',
+      img_src: '//dn-cnode.qbox.me/Fn4D6BhOTz1IswvmzeZ1q7QW1ls_',
+    },
+    {
+      href: 'https://www.jpush.cn/?from=cnode01',
+      label: 'jpush',
+      img_src: '//dn-cnode.qbox.me/FuYV5_y5_a2zUS7evoOiDsihbk9z',
+    },
+    {
+      href: 'https://cnodejs.org/topic/55a77e2f93ce02cd25985916',
+      label: 'guangyin',
+      img_src: '//dn-cnode.qbox.me/FphIGf6l1QKaEzhnlLHvw49GIv_P',
+    },
+    {
+      href: 'https://www.wilddog.com/?utm_source=cnodejs.org&utm_medium=banner&utm_campaign=orangemarch',
+      label: 'wilddog',
+      img_src: '//cdn.wilddog.com/images/ads/cnode/cnode-540x130-1.jpg',
+    }
+  ];
+
+    var randomNum = (new Date()).getMinutes() % ads.length;
+
+    ads = ads.slice(randomNum).concat(ads.slice(0, randomNum));
+%>
+<div class='panel'>
+  <div class='inner ads'>
+
+    <% ads.forEach(function (adObj, idx) { %>
+      <% if (idx !== 0) { %>
+        <div class="sep10"></div>
+      <% } %>
+      <a href="<%-adObj.href%>" target="_blank" class="banner sponsor_outlink"
+    data-label="<%=adObj.label%>">
+        <img src="<%- staticFile(adObj.img_src) %>">
+      </a>
+    <% }) %>
+  </div>
+</div>
