@@ -33,7 +33,7 @@ exports.sendActiveMail = function (who, token, name) {
       key: [token]
     };
     sendcloud.sendByTemplate(to,subject,'tf_account_active',sub).then(function(info){
-        logger.info(info);
+        console.log(info);
     });
 };
 
@@ -51,6 +51,6 @@ exports.sendResetPassMail = function (who, token, name) {
       key: [token]
     };
     sendcloud.sendByTemplate(to,subject,'tf_account_resetpwd',sub).then(function(info){
-        logger.info(info);
+        console.log(info);
     });
 };
