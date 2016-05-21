@@ -1,0 +1,42 @@
+<%- partial('../sidebar') %>
+
+<div id='content'>
+  <div class='panel'>
+    <div class='header'>
+      <ul class='breadcrumb'>
+        <li><a href='/'>主页</a><span class='divider'>/</span></li>
+        <li class='active'>产品演示</li>
+      </ul>
+    </div>
+    <div class='inner topic'>
+      <div class="topic_content">
+        <%- markdown(multiline(function () {
+/*
+### 产品演示
+
+ToughRADIUS 提供了两个在线版本演示，开源版本和企业版本。
+
+ToughRADIUS 在开源版的基础上新增了更多高级管理功能，如二级社区，票据打印，工单管理等。
+
+#### ToughRADIUS 开源版 
+
+管理地址: http://demo.std.toughradius.net
+
+认证地址：121.201.15.35 1812
+
+记账地址：121.201.15.35 1813
+
+#### ToughRADIUS 企业版
+
+管理地址: http://demo.ee.toughradius.net
+
+认证地址：121.201.15.35 2812
+
+记账地址：121.201.15.35 2813
+
+*/
+        })) %>
+      </div>
+    </div>
+  </div>
+</div>
