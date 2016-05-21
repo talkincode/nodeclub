@@ -7,7 +7,8 @@ var sendcloud     = new Sendcloud(
     config.sc_mail_opts.api_user,
     config.sc_mail_opts.api_key,
     config.sc_mail_opts.from,
-    '硬派云社区'
+    '硬派云社区',
+    ''
 );
 
 /**
