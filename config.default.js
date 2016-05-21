@@ -69,6 +69,13 @@ var config = {
       user: 'club@126.com',
       pass: 'club'
     }
+  },  
+
+  // sendcloud邮箱配置
+  sc_mail_opts: {
+    from: 'mail from',
+    apiUser: 'your api user',
+    apiKey: 'your api key'
   },
 
   //weibo app key
