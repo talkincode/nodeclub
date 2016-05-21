@@ -7,7 +7,7 @@ exports.about = function (req, res, next) {
   });
 };
 // Demo
-exports.about = function (req, res, next) {
+exports.demo = function (req, res, next) {
   res.render('static/demo', {
     pageTitle: '在线演示'
   });
