@@ -6,6 +6,12 @@ exports.about = function (req, res, next) {
     pageTitle: '关于我们'
   });
 };
+// Demo
+exports.about = function (req, res, next) {
+  res.render('static/demo', {
+    pageTitle: '在线演示'
+  });
+};
 
 // FAQ
 exports.faq = function (req, res, next) {
