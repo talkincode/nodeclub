@@ -4,8 +4,8 @@ var util          = require('util');
 var logger        = require('./logger');
 
 var sendcloud     = new Sendcloud(
-    config.sc_mail_opts.apiUser,
-    config.sc_mail_opts.apiKey,
+    config.sc_mail_opts.api_user,
+    config.sc_mail_opts.api_key,
     config.sc_mail_opts.from,
     '硬派云社区'
 );

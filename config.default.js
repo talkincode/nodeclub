@@ -74,8 +74,8 @@ var config = {
   // sendcloud邮箱配置
   sc_mail_opts: {
     from: 'mail from',
-    apiUser: 'your api user',
-    apiKey: 'your api key'
+    api_user: 'your api user',
+    api_key: 'your api key'
   },
 
   //weibo app key
