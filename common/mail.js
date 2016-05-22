@@ -30,8 +30,8 @@ exports.sendActiveMail = function (who, token, name) {
     var to = who;
     var subject = '硬派云社区帐号激活';
     var sub = {
-      name: [name],
-      key: [token]
+      "%name%": [name],
+      "%key%": [token]
     };
     sendcloud.templateToOne(to,subject,'tf_account_active',sub).then(function(info){
         console.log(info);
@@ -48,8 +48,8 @@ exports.sendResetPassMail = function (who, token, name) {
     var to = who;
     var subject = '硬派云社区帐号重置密码';
     var sub = {
-      name: [name],
-      key: [token]
+      "%name%": [name],
+      "%key%": [token]
     };
     sendcloud.templateToOne(to,subject,'tf_account_resetpwd',sub).then(function(info){
         console.log(info);
