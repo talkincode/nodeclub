@@ -27,7 +27,7 @@ exports.sendMail = sendMail;
  * @param {String} name 接收人的用户名
  */
 exports.sendActiveMail = function (who, token, name) {
-    var to = [who];
+    var to = who;
     var subject = '硬派云社区帐号激活';
     var sub = {
       name: [name],
@@ -45,7 +45,7 @@ exports.sendActiveMail = function (who, token, name) {
  * @param {String} name 接收人的用户名
  */
 exports.sendResetPassMail = function (who, token, name) {
-    var to = [who];
+    var to = who;
     var subject = '硬派云社区帐号重置密码';
     var sub = {
       name: [name],
