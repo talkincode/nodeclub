@@ -42,6 +42,7 @@
     <%- partial('./_ads') %>
   <% } %>
 
+
   <% if (typeof(no_reply_topics) !== 'undefined') { %>
   <div class='panel'>
     <div class='header'>
@@ -59,26 +60,7 @@
   </div>
   <% } %>
 
-  <% if (typeof(tops) !== 'undefined') { %>
-  <div class='panel'>
-    <div class='header'>
-      <span class='col_fade'>积分榜</span>
-      &nbsp;
-      <a class='dark' href='/users/top100'>TOP 100 &gt;&gt;</a>
-    </div>
-    <div class='inner'>
-      <% if (tops.length > 0) { %>
-      <ol>
-        <%- partial('user/top', { collection: tops, as: 'user' }) %>
-      </ol>
-      <% } else { %>
-      <p>无</p>
-      <% } %>
-    </div>
-  </div>
-  <% } %>
-
-  <div class='panel'>
+      <div class='panel'>
     <!--
     <div class='header'>
       <span class='col_fade'>链接</span>
@@ -100,6 +82,32 @@
       </ol>
     </div>
   </div>
+
+
+  <% if (typeof(tops) !== 'undefined') { %>
+  <div class='panel'>
+    <div class='header'>
+      <span class='col_fade'>积分榜</span>
+      &nbsp;
+      <a class='dark' href='/users/top100'>TOP 100 &gt;&gt;</a>
+    </div>
+    <div class='inner'>
+      <% if (tops.length > 0) { %>
+      <ol>
+        <%- partial('user/top', { collection: tops, as: 'user' }) %>
+      </ol>
+      <% } else { %>
+      <p>无</p>
+      <% } %>
+    </div>
+  </div>
+  <% } %>
+
+
+
+
+
+
   <div class='panel'>
     <div class='header'>
       <span class='col_fade'>微信公众号</span>
