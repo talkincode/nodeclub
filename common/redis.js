@@ -5,6 +5,7 @@ var logger = require('./logger')
 var client = new Redis({
   port: config.redis_port,
   host: config.redis_host,
+  password: config.redis_pwd,
   db: config.redis_db,
 });
 
