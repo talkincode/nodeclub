@@ -3,7 +3,7 @@ MAINTAINER toughcloud <support@toughstruct.com>
 
 RUN yum update -y
 RUN yum install -y epel-release
-RUN yum install -y gcc make git nodejs openssl openssl-devel zip unzip libjpeg-devel libpng-devel
+RUN yum install -y gcc make git nodejs npm openssl openssl-devel zip unzip libjpeg-devel libpng-devel
 RUN yum clean all
 
 RUN git clone -b master https://github.com/talkincode/nodeclub.git /opt/nodeclub
