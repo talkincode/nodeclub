@@ -3,7 +3,7 @@ MAINTAINER toughcloud <support@toughstruct.com>
 
 RUN yum update -y
 RUN yum install -y epel-release
-RUN yum install -y git nodejs
+RUN yum install -y gcc git nodejs
 RUN yum clean all
 
 RUN git clone -b master https://github.com/talkincode/nodeclub.git /opt/nodeclub
