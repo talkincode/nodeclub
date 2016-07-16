@@ -6,7 +6,7 @@ RUN yum install -y epel-release
 RUN yum install -y git nodejs
 RUN yum clean all
 
-RUN git clone -b master git@github.com:talkincode/nodeclub.git /opt/nodeclub
+RUN git clone -b master https://github.com/talkincode/nodeclub.git /opt/nodeclub
 RUN /opt/nodeclub && make install
 
 ADD runclub /usr/local/bin/runclub
