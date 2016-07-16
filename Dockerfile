@@ -6,11 +6,11 @@ RUN yum install -y epel-release
 RUN yum install -y gcc make git nodejs npm openssl openssl-devel zip unzip libjpeg-devel libpng-devel
 RUN yum clean all
 
+RUN npm install -g n && n stable
+
 RUN git clone -b master https://github.com/talkincode/nodeclub.git /opt/nodeclub
 RUN cd /opt/nodeclub && make install
 RUN cd /opt/nodeclub && npm install sendcloud
-
-RUN npm install -g n && n stable
 RUN cd /opt/nodeclub && make build
 
 ADD runclub /usr/local/bin/runclub
