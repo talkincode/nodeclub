@@ -7,7 +7,7 @@ RUN yum install -y git nodejs
 RUN yum clean all
 
 RUN git clone -b master https://github.com/talkincode/nodeclub.git /opt/nodeclub
-RUN /opt/nodeclub && make install
+RUN cd /opt/nodeclub && make install
 
 ADD runclub /usr/local/bin/runclub
 RUN chmod +x /usr/local/bin/runclub
