@@ -1,5 +1,11 @@
 #!/bin/sh
 
-rm -f /opt/nodeclub/config.js  
-ls -s /data/talincode/tforum/config.js /opt/nodeclub/config.js
-cd /opt/nodeclub && node app.js
+rm -f /opt/nodeclub/config.js
+
+cd /opt/nodeclub
+
+git pull origin master
+
+ls -s /data/talkincode/tforum/config.js /opt/nodeclub/config.js
+
+node app.js
